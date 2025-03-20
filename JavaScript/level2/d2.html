@@ -1,0 +1,39 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+ </head>
+ <body>
+    <div class="alert alert-danger">
+        5초 이내 구매시 사은품 증정
+    </div>
+
+    <div class="alert2 alert-danger">
+        <span id="num">5</span>초 이내 구매시 사은품 증정
+    </div>
+    <script>
+        var n = 5;
+        var timer = setInterval(() => {
+            if(n == 0){
+                clearInterval(timer);
+            }
+            $('.alert').html(n+'초 이내 구매시 사은품 증정');
+            n--;
+            
+        }, 1000);
+    </script>
+    <!-- <script>
+        var n = 5;
+        var timer = setInterval(() => {
+            if(n >= 0){
+                document.querySelector('#num').innerHTML= n--   
+            }
+        }, 1000);
+        
+    </script> -->
+ </body>
+ </html>
